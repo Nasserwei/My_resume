@@ -1,0 +1,223 @@
+/* ===== Reset & Font ===== */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fb; /* 主背景淡灰白 */
+    color: #000000; /* 預設文字改為黑色 */
+    line-height: 1.6;
+}
+
+/* ===== 導覽列 ===== */
+header {
+    background-color: #1f4e79; /* 深藍背景 */
+    border-bottom: 0px solid #ffffff; /* 深藍邊框 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff; /* 白色文字 */
+    font-weight: 600;
+    padding: 14px 22px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 1.15rem;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    background-color: #2e6ba8; /* 亮藍hover效果 */
+    transform: translateY(-2px);
+}
+
+.navbar a.active {
+    color: #ffffff;
+    background-color: #0f2f4f; /* 更深的藍色 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== 主內容 ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* 分頁切換核心 */
+.content-section {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* ===== 標題排版 ===== */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+h2, h3, h4 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+li {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+/* ===== 關於我內容 ===== */
+.about-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== 專案卡片 ===== */
+.project-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: #000000;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.project-gallery img {
+    flex: 1 1 48%;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ===== 分頁切換動畫 ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 自傳排版 ===== */
+.autobiography-section {
+    margin-bottom: 10px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.autobiography-section h2 {
+    color: #1f4e79;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e3edf7;
+}
+
+.autobiography-section p {
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fb;
+    border-radius: 6px;
+}
+
+.experience-item h3 {
+    color: #1f4e79;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.experience-item p {
+    margin-bottom: 6px;
+    line-height: 1.6;
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+.note {
+    font-size: 0.95rem;
+    color: #999999;
+    font-style: italic;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+    line-height: 1.4;
+}
+
+/* ===== 響應式 ===== */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-gallery img {
+        flex: 1 1 100%;
+    }
+}
