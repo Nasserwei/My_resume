@@ -12,8 +12,8 @@
     --radius: 8px;                 /* 圓角縮小一點，感覺更俐落 */
     
     /* [重點調整] 縮小區塊間距 */
-    --section-gap: 20px;           
-    --card-padding: 24px;
+    --section-gap: 10px;           
+    --card-padding: 10px;
 }
 
 * {
@@ -354,30 +354,60 @@ p {
     padding-bottom: 0;
 }
 
+/* =========================================
+   [修改] 專案作品排版 (上文下圖 + 網格圖片)
+   ========================================= */
+
+/* 1. 取消左右排版，改成預設的垂直堆疊 */
 .project-layout {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-.project-info { flex: 1; }
-.subtitle {
-    font-weight: 600;
-    color: var(--accent-color);
-    margin-bottom: 10px;
-    font-size: 1.05rem;
+    display: block; /* 從 flex 改成 block，讓圖片自然掉到下面 */
 }
 
-.project-imgs {
-    flex: 0 0 320px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.project-info {
+    width: 100%;
+    margin-bottom: 25px; /* 文字跟下方圖片的距離 */
 }
+
+/* 2. 圖片容器變成「網格系統」 */
+.project-imgs {
+    display: grid;
+    /* 自動排版：每張圖最小 250px，空間夠就自動並排，不夠就換行 */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 15px; /* 圖片之間的間隙 */
+    width: 100%;
+}
+
+/* 3. 圖片樣式優化 */
 .project-imgs img {
     width: 100%;
-    border-radius: 6px;
+    height: 180px; /* 設定固定高度，讓排版整齊 (可依需求調整) */
+    object-fit: cover; /* 讓圖片填滿框框，不變形 */
+    border-radius: 8px;
     border: 1px solid #eee;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* 讓滑鼠變成手指，暗示可互動 */
 }
+
+/* 滑鼠移過去圖片會稍微放大 */
+.project-imgs img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1; /* 浮在最上面 */
+}
+
+/* 手機版微調 */
+@media screen and (max-width: 600px) {
+    .project-imgs {
+        /* 手機上改為兩欄或一欄，看你想不想要圖片太大 */
+        grid-template-columns: 1fr; 
+    }
+    .project-imgs img {
+        height: auto; /* 手機上高度自動，避免切到太多 */
+        max-height: 250px;
+    }
+}
+
+/*-----------------------------------*/
 
 .tags-container { margin: 12px 0; }
 .tag {
@@ -532,11 +562,25 @@ p {
    [新增] 聯絡我按鈕樣式
    ========================================= */
 
+/* =========================================
+   [修改] 聯絡我按鈕容器 (強制 2x2 排列)
+   ========================================= */
+
 .contact-links-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* RWD 自動排版 */
-    gap: 20px;
+    
+    /* 關鍵修改：強制分成兩欄 (1fr 1fr)，這樣四個連結就會自動變成 上2 下2 */
+    grid-template-columns: 1fr 1fr; 
+    
+    gap: 20px; /* 按鈕之間的間距 */
     margin-top: 10px;
+}
+
+/* 手機版優化：手機螢幕太窄，強制 2x2 會很擠，建議手機改回直排 */
+@media screen and (max-width: 600px) {
+    .contact-links-container {
+        grid-template-columns: 1fr; /* 手機變成一行一個 */
+    }
 }
 
 .contact-btn {
@@ -624,3 +668,58 @@ p {
 .job-btn:hover .icon-box { background-color: #ed8936; }
 .job-btn:hover .icon-box svg { color: #ffffff; }
 .job-btn:hover .link-text { color: #c05621; }
+
+/* =========================================
+   [新增] 大學課業表現圖片網格
+   ========================================= */
+
+.academic-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 左右兩欄 (2x2 排列) */
+    gap: 20px; /* 圖片之間的間距 */
+    margin-top: 20px;
+}
+
+.academic-gallery figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #eee; /* 淡淡的邊框 */
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.academic-gallery figure:hover {
+    transform: translateY(-5px); /* 滑鼠移過去稍微浮起 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.academic-gallery img {
+    width: 100%;
+    height: 300px; /* 設定固定高度，讓四張看起來一樣整齊 */
+    object-fit: contain; /* 讓圖片填滿框框，不會變形 */
+    background-color: #fff;
+    display: block;
+
+}
+
+.academic-gallery figcaption {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    font-weight: 500;
+}
+
+/* 手機版調整：變成單欄顯示，圖片比較清楚 */
+@media screen and (max-width: 600px) {
+    .academic-gallery {
+        grid-template-columns: 1fr; /* 變成一欄 */
+    }
+    
+    .academic-gallery img {
+        height: auto; /* 手機上高度自動，避免圖片被切太多 */
+    }
+}
