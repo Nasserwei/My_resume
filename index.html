@@ -2,264 +2,396 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>許鉦偉｜個人作品集</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-
-    <!-- 導覽列 -->
     <header>
-        <nav class="navbar">
-            <a href="#" data-target="about">關於我</a>
-            <a href="#" data-target="autobiography">自傳</a>
-            <a href="#" data-target="projects">專案作品</a>
-            <a href="#" data-target="competitions">競賽經驗</a>
-            <a href="#" data-target="learning">學習內容</a>
-            <a href="#" data-target="certificates">其他相關證明</a>
-            <a href="#" data-target="contact">聯絡我</a>
-        </nav>
+        <div class="header-container">
+            <div class="logo">許鉦偉 <span>Hsu, Cheng-Wei</span></div>
+            <nav class="navbar">
+                <a href="#" data-target="about" class="active">關於我</a>
+                <a href="#" data-target="autobiography">自傳</a>
+                <a href="#" data-target="projects">專案作品</a>
+                <a href="#" data-target="competitions">競賽經驗</a>
+                <a href="#" data-target="learning">學習內容</a>
+                <a href="#" data-target="certificates">其他證明</a>
+                <a href="#" data-target="contact">聯絡我</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- 主內容 -->
     <main class="container">
 
-        <section id="about" class="content-section">
-            <h1>關於我</h1>
-            
-            <div class="about-content">
-                <p>
-                    目前就讀於國立中山大學資訊管理學系碩士班，研究與學習重心聚焦於資訊系統分析、資料應用與科技驅動之管理決策。
-                </p>
-                <p>
-                    大學期間主修數位內容科技，累積資訊應用、系統思維與跨領域實作基礎，並透過多項專題與競賽，培養將資訊技術轉化為實際商業與使用者價值的能力。在學期間曾擔任多項學生幹部，熟悉專案協作、溝通協調與時程管理；亦參與研究計畫與實務導向專案，結合資訊技術與情境需求進行問題分析與解決。整體而言，具備資訊技術理解力、商業思維與實務執行力，期望於實習中發揮資訊管理背景，協助組織提升數位應用與決策效率。
-                </p>
+    <section id="about" class="content-section active">
+    <h1 class="page-title">關於我</h1>
+    
+            <div class="about-hero card">
+                <div class="about-gallery">
+                    <img src="assets/image/photo1.jpg" alt="個人照片1">
+                </div>
+                <div class="about-intro">
+                    <p class="highlight-text">
+                        目前就讀於國立中山大學資訊管理學系碩士班，研究與學習重心聚焦於資訊系統分析、資料應用與科技驅動之管理決策。
+                    </p>
+                    <p>
+                        大學期間主修數位內容科技，累積資訊應用、系統思維與跨領域實作基礎，並透過多項專題與競賽，培養將資訊技術轉化為實際商業與使用者價值的能力。在學期間曾擔任多項學生幹部，熟悉專案協作、溝通協調與時程管理；亦參與研究計畫與實務導向專案，結合資訊技術與情境需求進行問題分析與解決。整體而言，具備資訊技術理解力、商業思維與實務執行力，期望於實習中發揮資訊管理背景，協助組織提升數位應用與決策效率。
+                    </p>
+                </div>
             </div>
 
-            <div class="about-gallery">
-                <img src="assets/image/photo1.jpg" alt="個人照片1">
-                <img src="assets/image/photo2.jpg" alt="個人照片2">
+            <div class="row-2-col">
+                <div class="card">
+                    <h3><span class="icon">學歷</h3>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-date">2021/9 ~ 2025/6</div>
+                            <div class="timeline-content">
+                                <strong>國立彰化師範大學</strong><br>資訊管理學系 學士
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-date">2025/9 ~ 至今</div>
+                            <div class="timeline-content">
+                                <strong>國立中山大學</strong><br>資訊管理學系 碩士（就讀中）
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3><span class="icon">專長</h3>
+                    <div class="skill-tags">
+                        <span>資料數據分析</span>
+                        <span>科技管理應用</span>
+                        <span>人工智慧</span>
+                        <span>人機互動</span>
+                        <span>多媒體互動</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><span class="icon"> 專業技能</h3>
+                <div class="skills-compact-grid">
+                    <div class="skill-group">
+                        <h4>資訊與資料應用</h4>
+                        <div class="tag-cloud">
+                            <span class="tag-pill primary">Python</span>
+                            <span class="tag-pill primary">SQL</span>
+                            <span class="tag-pill primary">PowerBI</span>
+                            <span class="tag-pill primary">HTML / CSS</span>
+                            <span class="tag-pill secondary">C++</span>
+                            <span class="tag-pill secondary">PHP</span>
+                            <span class="tag-pill secondary">Java</span>
+                            <span class="tag-pill secondary">Linux</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4>數位內容與互動</h4>
+                        <div class="tag-cloud">
+                            <span class="tag-pill primary">Maya 3D</span>
+                            <span class="tag-pill primary">Blender</span>
+                            <span class="tag-pill primary">Unity</span>
+                            <span class="tag-pill secondary">Adobe AE</span>
+                            <span class="tag-pill secondary">Adobe PR</span>
+                            <span class="tag-pill secondary">Photoshop</span>
+                            <span class="tag-pill secondary">Mixcraft9 Recording</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4>管理與商業基礎</h4>
+                        <div class="tag-cloud">
+                            <span class="tag-pill primary">資訊管理 (MIS)</span>
+                            <span class="tag-pill secondary">企業概論</span>
+                            <span class="tag-pill secondary">網路行銷</span>
+                            <span class="tag-pill secondary">專案管理</span>
+                            <span class="tag-pill secondary">人力資源管理</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4>外語能力</h4>
+                        <div class="tag-cloud">
+                            <span class="tag-pill secondary">TOEIC 760</span>
+                            <span class="tag-pill secondary">GEPT 中級</span>
+                            <span class="tag-pill secondary">IELTS (準備中)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h3><span class="icon">工作經歷</h3>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-date">2025/9 ~ 2025/12</div>
+                        <div class="timeline-content">
+                            <strong>國立中山大學</strong> - 系統分析與設計 課程助教
+                            <p class="desc">協助教師進行課程執行與教材整理，支援學生軟硬體操作與問題排除。熟悉課程流程與系統操作說明，培養結構化說明與問題解決能力。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-date">2024/9 ~ 2025/6</div>
+                        <div class="timeline-content">
+                            <strong>國立彰化師範大學</strong> - 通識課程助教
+                            <p class="desc">協助課程執行與教材整理，擔任教師與學生間的溝通橋梁。培養教學輔助、問題分析與學習成效回饋能力。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-date">2023/2 ~ 2023/6</div>
+                        <div class="timeline-content">
+                            <strong>夏恩英語學校－彰化補習班</strong> - 英語教師 / 助教
+                            <p class="desc">負責學習進度追蹤、教材準備與課程執行。透過教學規劃與成果評量，培養表達與溝通能力。</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section id="autobiography" class="content-section">
-            <h1>自傳</h1>
+            <h1 class="page-title">自傳</h1>
             
-            <div class="autobiography-section">
+            <div class="card">
                 <h2>1. 關於我</h2>
-                <p>
-                    我是許鉦偉，目前就讀於國立中山大學資訊管理學系碩士班，研究與學習重心聚焦於資訊系統、商業數據分析、資料庫、數位應用與科技專案實務。
-                </p>
-                <p>
-                    我具備資訊管理與多媒體人機互動背景，並結合大學期間累積的數位內容與互動應用經驗，累積專案規劃、跨角色溝通與執行落地的實務經驗，能在技術、使用者需求與專案執行之間進行整合。在研究所階段，我期望透過實習，將理論與實務接軌，進一步累積產業導向的專案經驗與商業思維。
-                </p>
+                <p>我是許鉦偉，目前就讀於國立中山大學資訊管理學系碩士班，研究與學習重心聚焦於資訊系統、商業數據分析、資料庫、數位應用與科技專案實務。</p>
+                <p>我具備資訊管理與多媒體人機互動背景，並結合大學期間累積的數位內容與互動應用經驗，累積專案規劃、跨角色溝通與執行落地的實務經驗，能在技術、使用者需求與專案執行之間進行整合。在研究所階段，我期望透過實習，將理論與實務接軌，進一步累積產業導向的專案經驗與商業思維。</p>
             </div>
 
-            <div class="autobiography-section">
+            <div class="card">
                 <h2>2. 人格特質與能力</h2>
-                
                 <div class="personality-container">
-                    <div class="personality-left">
-                        <p style="color: #000000; margin-bottom: 16px; line-height: 1.8; margin-left: 60px; margin-top: 60px;">
-                            積極對待生活中的任何事情，並自我要求高，持續精進自己，培養實力與競爭力。
-                        </p>
-                        <p style="color: #000000; margin-bottom: 16px; line-height: 1.8;margin-left: 100px; margin-top: 70px;">
-                            在資訊爆炸的時代，懂得理性分析，衡量事物的利弊，做出合適的選擇。
-                        </p>
+                    <div class="personality-left text-block">
+                        <p>積極對待生活中的任何事情，並自我要求高，持續精進自己，培養實力與競爭力。</p>
+                        <p>在資訊爆炸的時代，懂得理性分析，衡量事物的利弊，做出合適的選擇。</p>
                     </div>
 
                     <div class="personality-center">
                         <div class="personality-circle">
+                            <div class="circle-center-icon"></div>
                             <div class="circle-item item-1">細心<br/>負責</div>
                             <div class="circle-item item-2">勇於<br/>挑戰</div>
-                            <div class="circle-item item-3">充滿好奇心</div>
-                            <div class="circle-item item-4">善於溝通<br/>與協調</div>
+                            <div class="circle-item item-3">充滿<br/>好奇心</div>
+                            <div class="circle-item item-4">善於<br/>溝通協調</div>
                             <div class="circle-item item-5">成熟<br/>穩重</div>
                         </div>
                     </div>
 
-                    <div class="personality-right">
-                        <p style="color: #000000; margin-bottom: 16px; line-height: 1.8;margin-right: 60px; margin-top: 60px;">
-                            對於困難的挑戰，積極向上學習，勇於嘗試挫折，並從中學習，取得經驗。
-                        </p>
-                        <p style="color: #000000; margin-bottom: 16px; line-height: 1.8;margin-right: 60px; margin-top: 60px;">
-                            求學階段，對於不同事情與話題，都感興趣，並加以探索並發掘新事物。
-                        </p>
+                    <div class="personality-right text-block">
+                        <p>對於困難的挑戰，積極向上學習，勇於嘗試挫折，並從中學習，取得經驗。</p>
+                        <p>求學階段，對於不同事情與話題，都感興趣，並加以探索並發掘新事物。</p>
                     </div>
                 </div>
-
-                <p style="color: #000000; margin-top: 20px; line-height: 1.8; text-align: center;">
-                    擔任活動、系學會幹部與課程助教相關工作等，擁有良好的<span style="color: #1f4e79; font-weight: 700;">溝通與協調能力</span>，並建立信任關係。
-                </p>
-            </div>
+                <p class="summary-text">擔任活動、系學會幹部與課程助教相關工作等，擁有良好的溝通與協調能力，並建立信任關係。</p>
             </div>
 
-            <div class="autobiography-section">
+            <div class="card">
                 <h2>3. 特殊經歷</h2>
-                <div class="experience-item">
+                <div class="experience-block">
                     <h3>幹部經驗｜專案規劃與跨部門協調</h3>
-                    <p>
-                        大學期間，我曾擔任系學會生活長、迎新活動生活長及班代，實際負責活動專案的規劃、時程控管、人力與資源配置，並需在跨部門與多位幹部中協作完成任務。在此過程中，我扮演專案協調角色，需快速整合意見、判斷優先順序並即時處理突發狀況，使活動能如期完成。此經驗讓我累積專案管理概念、溝通協調能力與多任務執行能力。
-                    </p>
+                    <p>大學期間，我曾擔任系學會生活長、迎新活動生活長及班代，實際負責活動專案的規劃、時程控管、人力與資源配置，並需在跨部門與多位幹部中協作完成任務。在此過程中，我扮演專案協調角色，需快速整合意見、判斷優先順序並即時處理突發狀況，使活動能如期完成。此經驗讓我累積專案管理概念、溝通協調能力與多任務執行能力。</p>
                 </div>
-                <div class="experience-item">
+                <div class="experience-block">
                     <h3>校內 USR 社會專題競賽｜團隊召集（第二名）</h3>
-                    <p>
-                        此競賽旨在激發學生對當地社會問題的關注與探討，鼓勵跨學科合作與創新。在競賽中，我擔任團隊召集人，負責問題分析、企劃整合與成果呈現。透過分析地方產業需求，發想「網頁設計結合多媒體應用」的數位解決方案，並將團隊構想轉化為具體企劃與視覺成果。最終提案榮獲校內 USR 社會專題競賽第二名。
-                    </p>
+                    <p>此競賽旨在激發學生對當地社會問題的關注與探討，鼓勵跨學科合作與創新。在競賽中，我擔任團隊召集人，負責問題分析、企劃整合與成果呈現。透過分析地方產業需求，發想「網頁設計結合多媒體應用」的數位解決方案，並將團隊構想轉化為具體企劃與視覺成果。最終提案榮獲校內 USR 社會專題競賽第二名。</p>
                 </div>
-
-                <div class="experience-item">
+                <div class="experience-block">
                     <h3>全國大專院校創意行銷競賽｜最佳數位應用獎</h3>
-                    <p>
-                        在全國競賽中，我參與數位互動應用的企劃發想，提出數位科技互動之概念，將文化與信仰元素轉譯為適合年輕族群的數位體驗方案。透過此專案，從中學習到商業目標、使用者體驗與技術可行性之間取得平衡，並榮獲「最佳數位應用獎」。
-                    </p>
+                    <p>在全國競賽中，我參與數位互動應用的企劃發想，提出數位科技互動之概念，將文化與信仰元素轉譯為適合年輕族群的數位體驗方案。透過此專案，從中學習到商業目標、使用者體驗與技術可行性之間取得平衡，並榮獲「最佳數位應用獎」。</p>
                 </div>
-
-                <div class="experience-item">
+                <div class="experience-block">
                     <h3>國科會大專生研究計畫 通過｜研究與實作經驗</h3>
-                    <p>
-                        我參與「XR 結合實境解謎互動遊戲應用於銀髮族認知刺激」研究，負責互動介面設計、基礎程式實作與資料整合分析，並根據使用者回饋調整設計。研究成果已於 2025 年國際研討會正式發表，讓我累積資訊技術應用、資料分析與研究驗證的實務經驗。
-                    </p>
+                    <p>我參與「XR 結合實境解謎互動遊戲應用於銀髮族認知刺激」研究，負責互動介面設計、基礎程式實作與資料整合分析，並根據使用者回饋調整設計。研究成果已於 2025 年國際研討會正式發表，讓我累積資訊技術應用、資料分析與研究驗證的實務經驗。</p>
                     <p class="note">投稿至 2025 年跨域創新設計整合國際研討會，經評審審核獲得正式發表</p>
                 </div>
-
-                <div class="experience-item">
+                <div class="experience-block">
                     <h3>畢業專題《時光樹語》｜沉浸式互動體驗</h3>
-                    <p>
-                        《時光樹語》為一項沉浸式互動體驗專案，應用於銀髮族之認知刺激。我負責互動流程設計、3D 視覺整合與使用者體驗分析，透過生命樹的成長為主軸，喚起高齡者生命中的深刻記憶，讓參與者身臨其境感受生命的美好。
-                    </p>
+                    <p>《時光樹語》為一項沉浸式互動體驗專案，應用於銀髮族之認知刺激。我負責互動流程設計、3D 視覺整合與使用者體驗分析，透過生命樹的成長為主軸，喚起高齡者生命中的深刻記憶，讓參與者身臨其境感受生命的美好。</p>
                     <p class="note">應用的能力：團隊合作、溝通與協調、分析現況、互動程式設計、3D 動畫設計、使用者經驗分析、多媒體藝術應用</p>
                     <p class="note">代表本系畢業專題參與 2024 大專校院資訊應用服務創新競賽決賽</p>
                 </div>
             </div>
 
-            <div class="autobiography-section">
+            <div class="card">
                 <h2>4. 未來展望</h2>
-                <p>
-                    我熱愛結合電腦資訊、數位科技與創意的跨域應用，期望於 2026 暑期進入相關產業實習，投入商管或資訊相關實習職位，如專案管理、資訊系統、數據或數位應用相關團隊。透過實際參與專案執行，累積產業經驗，並為團隊帶來具體產出與價值。
-                </p>
-                <p>
-                    未來希望能進一步提升自己在資訊應用、數位內容、人機互動與專案管理上的實力，參與更多能為公司帶來社會影響力的專案，並推動人性化且具溫度的科技應用。
-                </p>
+                <p>我熱愛結合電腦資訊、數位科技與創意的跨域應用，期望於 2026 暑期進入相關產業實習，投入商管或資訊相關實習職位，如專案管理、資訊系統、數據或數位應用相關團隊。透過實際參與專案執行，累積產業經驗，並為團隊帶來具體產出與價值。</p>
+                <p>未來希望能進一步提升自己在資訊應用、數位內容、人機互動與專案管理上的實力，參與更多能為公司帶來社會影響力的專案，並推動人性化且具溫度的科技應用。</p>
             </div>
 
-            <div class="autobiography-section">
+            <div class="card">
                 <h2>5. 總結</h2>
-                <p>
-                    我具備資訊背景、專案執行經驗與良好的溝通協調能力，始終保持學習與挑戰的熱忱，擅長跨領域整合，並善於傾聽與協作，能快速理解需求並投入實作。期待透過實習，深化商管與資訊整合能力，成為能與團隊共同成長的實習成員。面對快速變化的科技時代，我期許自己持續精進，創造更多具溫度與價值的科技應用。
-                </p>
+                <p>我具備資訊背景、專案執行經驗與良好的溝通協調能力，始終保持學習與挑戰的熱忱，擅長跨領域整合，並善於傾聽與協作，能快速理解需求並投入實作。期待透過實習，深化商管與資訊整合能力，成為能與團隊共同成長的實習成員。面對快速變化的科技時代，我期許自己持續精進，創造更多具溫度與價值的科技應用。</p>
             </div>
         </section>
-<!-- /------------------------------------------------------------------- -->
+
         <section id="projects" class="content-section">
-            <h1>專案作品</h1>
-
-            <div class="project-card">
-                <h2>1. 時光樹語｜沉浸式互動體驗</h2>
-                <h3>專題名稱：應用於銀髮族之沉浸式互動體驗｜指導教授：吳佩芬教授</h3>
-                    <p style="color: #000000;">
-                        概要說明：本專題將設計一款為高齡者的沉浸式互動體驗，結合與高齡者喜愛的休閒活動，將互動投影技術導入體驗中，並與雲科大數媒中心合作，透過三面牆環繞的沉浸式體驗及簡單的互動操作，滿足其對互動體驗的需求，並增加接觸科技之機會，期望能療癒高齡者的身心靈，放鬆心情以減少負面情緒。
-                        
-                    </p>
-                     <p class="note" style="color: #000000;">關鍵字：高齡者、成功老化、休閒活動、沉浸式互動體驗、互動投影技術、互動體感</p>
-                     <p class="note" style="color: #000000;">技術執行：Blender3D、Maya3D、Unity、C#、Python、AE動畫與特效、AI視覺風格、互動呈現方式</p>
-                     <p class="note" style="color: #000000;">代表本系畢業專題參與 2024 大專校院資訊應用服務創新競賽決賽</p>
-                     
-
-                <div class="project-gallery">
+            <h1 class="page-title">專案作品</h1>
+            
+            <div class="card project-layout">
+                <div class="project-info">
+                    <h2>1. 時光樹語｜沉浸式互動體驗</h2>
+                    <p class="subtitle">專題名稱：應用於銀髮族之沉浸式互動體驗｜指導教授：吳佩芬教授</p>
+                    <p>概要說明：本專題將設計一款為高齡者的沉浸式互動體驗，結合與高齡者喜愛的休閒活動，將互動投影技術導入體驗中，並與雲科大數媒中心合作，透過三面牆環繞的沉浸式體驗及簡單的互動操作，滿足其對互動體驗的需求，並增加接觸科技之機會，期望能療癒高齡者的身心靈，放鬆心情以減少負面情緒。</p>
+                    <div class="tags-container">
+                        <span class="tag">高齡者</span>
+                        <span class="tag">成功老化</span>
+                        <span class="tag">沉浸式互動體驗</span>
+                        <span class="tag">互動投影技術</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">AE 視覺特效</span>
+                        <span class="tag">PS、AI 視覺設計</span>
+                    </div>
+                    <p class="note">代表本系畢業專題參與 2024 大專校院資訊應用服務創新競賽決賽</p>
+                </div>
+                <div class="project-imgs">
                     <img src="images/project1-1.jpg" alt="專案畫面1">
                     <img src="images/project1-2.jpg" alt="專案畫面2">
                 </div>
-
-                <h2>2. 國科會大專生研究計畫</h2>
-                <h3>計畫名稱：XR結合實境解謎互動遊戲應用於銀髮族認知刺激之探討｜指導教授：吳佩芬教授</h3>
-                <p style="color: #000000; font-weight: 700; margin-bottom: 6px;">
-                    (1) 研究目的
-                </p>
-                <div style="color: #000000; line-height: 1.8; margin-bottom: 12px;">
-                    <p style="margin: 4px 0;">1. 設計一款適合銀髮族需求的 XR 實境解謎互動遊戲，融合多元訓練元素，難易度由淺入深且具趣味性。</p>
-                    <p style="margin: 4px 0;">2. 透過簡潔介面與操作說明，提高銀髮族對 XR 技術的接受度與參與意願。</p>
-                    <p style="margin: 4px 0;">3. 評估遊戲對提升認知能力及延緩認知衰退的潛力。</p>
-                </div>
-
-                <p style="color: #000000; font-weight: 700; margin-bottom: 6px;">
-                    (2) 研究方法
-                </p>
-                <p style="color: #000000; margin-bottom: 12px;">
-                    本研究採用文獻分析、訪談及問卷調查法，根據文獻資料和銀髮族訪談的內容設計實境遊戲，並將 XR 技術導入遊戲中，並迭代遊戲測試及設計修正，再設計使用者問卷並在體驗前與體驗後做調查，最後分析成果並提出結論與建議。本研究大致可分為五大階段，包含前置作業、解謎遊戲元素分析與設計、XR 技術導入互動遊戲開發、銀髮族參與者問卷調查和研究結論與分析。
-                </p>
-
-                <p style="color: #000000; font-weight: 700; margin-bottom: 6px;">
-                    (3) 實驗設計
-                </p>
-                <p style="color: #000000; margin-bottom: 12px;">
-                    本 XR 實境解謎遊戲名稱為「憶起美好」。六個關卡分別為：第一關「過目不忘」為專注力與記憶力訓練，銀髮族需先記住畫面所有出現過的水果，後續會有水果消失，接著選出不見的水果名稱；第二關「懷舊歌曲」為記憶力訓練，以懷舊歌曲為主的猜歌遊戲，聽完音樂後，會出現三首歌曲名稱選項，選出正確的歌名；第三關「神機妙算」為運算能力訓練，依據畫面上的數字與數學符號，完成四則運算；第四關「回憶日常」為記憶力與邏輯力訓練，畫面會先出現 2-5 張卡牌，牌裡出現日常生活用品的圖案，之後蓋住卡牌 3 秒，接著翻開卡牌，找出與原先不同的卡牌；第五關「烤雞蛋糕」為注意力與空間感訓練，需思考當烤盤翻面時，雞蛋糕會出現的位置（翻面前至翻面後的鏡射位置），並在畫面中點選出正確的對應位置；第六關「過年吉祥話」為記憶力與認知訓練，需選出有關題目上對應有過年意涵的吉祥話。每關遊戲皆有時間限制，於體驗後得到相對應的分數與題數，並請銀髮族圈選出每關遊戲的難易度，以作為訪談與問卷調查之參考。
-                </p>
-
-                <p style="color: #000000; font-weight: 700; margin-bottom: 6px;">
-                    (4) 實驗成果
-                </p>
-                <p style="color: #000000; margin-bottom: 12px;">
-                    透過實驗設計與實測分析，結果顯示約 70–80% 高齡者能順利操作並接受所設計之互動遊戲，且對專注力與認知刺激具顯著正向影響。
-                </p>
-
-                <p style="color: #000000; font-weight: 700; margin-bottom: 6px;">
-                    (5) 總結
-                </p>
-                <p style="color: #000000; margin-bottom: 12px;">
-                    綜合數據分析與訪談回饋，本研究設計的 XR 實境解謎互動遊戲有效提升銀髮族的科技接受度，降低對科技的陌生感，並增強使用體驗。遊戲體驗方面，銀髮族認為內容新穎有趣，過去未曾接觸類似遊戲與故事情節，而故事內容能連結個人經歷與情感，使其更能沉浸其中，並能專注於遊戲與促進大腦認知。SmartPLS 分析顯示，認知有用性對愉悅感具有顯著影響，而認知易用性則強烈影響可玩性。此外，各關卡表現分析指出，「過目不忘」與「回憶日常」關卡需提供更充足的記憶時間，以提升遊戲體驗；「神機妙算」關卡則建議簡化四則運算難度，以增強遊玩信心。
-                </p>
-
-                <p class="note" style="color: #000000;">關鍵字：銀髮族、認知刺激、XR 互動體驗、實境解謎、科技接受度</p>
-                <p class="note" style="color: #000000;">技術執行：MAKAR、AE 視覺設計、SmartPLS、Excel 資料分析、互動程式設計、使用者經驗分析</p>
-                <p class="note" style="color: #000000;">投稿至 2025 年跨域創新設計整合國際研討會，經評審審核獲得正式發表。</p>
-
-                <div class="project-gallery">
-                    <img src="images/project1-1.jpg" alt="畢業專題1">
-                    <img src="images/project1-2.jpg" alt="畢業專題2">
-                </div>
-
-                <h2>1. 時光樹語｜沉浸式互動體驗</h2>
-
-                
             </div>
 
+            <div class="card">
+                <h2>2. 國科會大專生研究計畫</h2>
+                <p class="subtitle">計畫名稱：XR結合實境解謎互動遊戲應用於銀髮族認知刺激之探討｜指導教授：吳佩芬教授</p>
+                
+                <div class="project-details">
+                    <h3>(1) 研究目的</h3>
+                    <p>1. 設計一款適合銀髮族需求的 XR 實境解謎互動遊戲，融合多元訓練元素，難易度由淺入深且具趣味性。<br>
+                       2. 透過簡潔介面與操作說明，提高銀髮族對 XR 技術的接受度與參與意願。<br>
+                       3. 評估遊戲對提升認知能力及延緩認知衰退的潛力。</p>
+                    
+                    <h3>(2) 研究方法</h3>
+                    <p>本研究採用文獻分析、訪談及問卷調查法，根據文獻資料和銀髮族訪談的內容設計實境遊戲，並將 XR 技術導入遊戲中，並迭代遊戲測試及設計修正，再設計使用者問卷並在體驗前與體驗後做調查，最後分析成果並提出結論與建議。</p>
+                    
+                    <h3>(3) 實驗設計</h3>
+                    <p>本XR實境解謎遊戲名稱為「憶起美好」。六個關卡分別為：第一關「過目不忘」為專注力與記憶力訓練，銀髮族需先記住畫面所有出現過的水果，後續會有水果消失，接著選出不見的水果名稱；第二關「懷舊歌曲」為記憶力訓練，以懷舊歌曲為主的猜歌遊戲，聽完音樂後，會出現三首歌曲名稱選項，選出正確的歌名；第三關「神機妙算」為運算能力訓練，依據畫面上的數字與數學符號，完成四則運算；第四關「回憶日常」為記憶力與邏輯力訓練，畫面會先出現2-5張卡牌，牌裡出現日常生活用品的圖案，之後蓋住卡牌3秒，接著翻開卡牌，找出與原先不同的卡牌；第五關「烤雞蛋糕」為注意力與空間感訓練，需思考當烤盤翻面時，雞蛋糕會出現的位置(翻面前至翻面後的鏡射位置)，並在畫面中點選出正確的對應位置；第六關「過年吉祥話」為記憶力與認知訓練，需選出有關題目上對應有過年意涵的吉祥話。每關遊戲皆有時間限制，於體驗後得到相對應的分數與題數，並請銀髮族圈選出每關遊戲的難易度，以作為訪談與問卷調查之參考。</p>
+
+                    <h3>(4) 實驗成果</h3>
+                    <p>透過實驗設計與實測分析，結果顯示約 70–80% 高齡者能順利操作並接受所設計之互動遊戲，且對專注力與認知刺激具顯著正向影響。</p>
+
+                    <h3>(5) 總結</h3>
+                    <p>綜合數據分析與訪談回饋，本研究設計的 XR 實境解謎互動遊戲有效提升銀髮族的科技接受度。SmartPLS 分析顯示，認知有用性對愉悅感具有顯著影響，而認知易用性則強烈影響可玩性。</p>
+
+                    <div class="tags-container">
+                        <span class="tag">銀髮族</span>
+                        <span class="tag">認知刺激</span>
+                        <span class="tag">XR 互動體驗</span>
+                        <span class="tag">MAKAR</span>
+                        <span class="tag">SmartPLS</span>
+                    </div>
+                    <p class="note">投稿至 2025 年跨域創新設計整合國際研討會，經評審審核獲得正式發表。</p>
+                </div>
+            </div>
         </section>
-<!-- -------------------------------------------------------------------------------------- -->
+
         <section id="competitions" class="content-section">
-            <h1>競賽經驗</h1>
-            <ul>
-                <li>USR 社會專題競賽｜第二名</li>
-                <li>全國大專創意行銷競賽｜最佳數位應用獎</li>
-            </ul>
+            <h1 class="page-title">競賽經驗</h1>
+            <div class="card">
+                <ul class="medal-list">
+                    <li>
+                        <span class="medal-icon">🥈</span>
+                        <div class="medal-info">
+                            <strong>USR 社會專題競賽</strong>
+                            <span>第二名</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="medal-icon">🏆</span>
+                        <div class="medal-info">
+                            <strong>全國大專創意行銷競賽</strong>
+                            <span>最佳數位應用獎</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="learning" class="content-section">
-            <h1>學習內容</h1>
-            <p>以下為我整理的學習資料：</p>
-            <ul>
-                <li><a href="files/database-notes.pdf" target="_blank">資料庫筆記 PDF</a></li>
-                <li><a href="files/ui-design.pdf" target="_blank">UI 設計講義</a></li>
-                <li><a href="files/report.docx">專題研究報告</a></li>
-            </ul>
+            <h1 class="page-title">學習內容</h1>
+            <div class="card">
+                <p>以下為我整理的學習資料：</p>
+                <div class="file-list">
+                    <a href="files/database-notes.pdf" target="_blank" class="file-item">
+                        <span class="file-icon">📄</span> 資料庫筆記 PDF
+                    </a>
+                    <a href="files/ui-design.pdf" target="_blank" class="file-item">
+                        <span class="file-icon">📘</span> UI 設計講義
+                    </a>
+                    <a href="files/report.docx" class="file-item">
+                        <span class="file-icon">📝</span> 專題研究報告
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section id="certificates" class="content-section">
-            <h1>其他相關證明</h1>
-            <p>以下為相關證書與認證：</p>
-            <ul>
-                <li>證書或認證項目 1</li>
-                <li>證書或認證項目 2</li>
-                <li>證書或認證項目 3</li>
-            </ul>
+            <h1 class="page-title">其他相關證明</h1>
+            <div class="card">
+                <p>以下為相關證書與認證：</p>
+                <ul class="simple-list">
+                    <li>證書或認證項目 1</li>
+                    <li>證書或認證項目 2</li>
+                    <li>證書或認證項目 3</li>
+                </ul>
+            </div>
         </section>
 
         <section id="contact" class="content-section">
-            <h1>聯絡我</h1>
-            <p>Email：xxxx@gmail.com</p>
-            <p>GitHub：<a href="https://github.com/你的帳號" target="_blank">github.com/你的帳號</a></p>
-        </section>
+    <h1 class="page-title">聯絡我</h1>
+    <div class="card contact-card">
+        <div class="contact-links-container">
+            
+            <a href="mailto:nasser768416@gmail.com" class="contact-btn email-btn">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-info">
+                    <span class="platform-name">Email</span>
+                    <span class="link-text">nasser768416@gmail.com</span>
+                </div>
+            </a>
+
+            <a href="https://www.cake.me/me/Nasser_photo" target="_blank" class="contact-btn cake-btn">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="contact-info">
+                    <span class="platform-name">CakeResume</span>
+                    <span class="link-text">查看我的 Cake 履歷</span>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nasser-140397358" target="_blank" class="contact-btn linkedin-btn">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="contact-info">
+                    <span class="platform-name">LinkedIn</span>
+                    <span class="link-text">查看個人檔案</span>
+                </div>
+            </a>
+
+            <a href="https://pda.104.com.tw/profile/preview?vno=76evfozol" target="_blank" class="contact-btn job-btn">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <div class="contact-info">
+                    <span class="platform-name">104 人力銀行</span>
+                    <span class="link-text">履歷預覽</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
 
     </main>
 
