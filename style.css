@@ -723,3 +723,261 @@ p {
         height: auto; /* 手機上高度自動，避免圖片被切太多 */
     }
 }
+
+/* =========================================
+   [最終版] 頁尾樣式 (統一風格)
+   ========================================= */
+
+.site-footer {
+    background-color: #163a5e;
+    color: #ffffff;
+    
+    /* [修改 1] 大幅縮小留白 */
+    padding: 25px 0 25px;  /* 原本是 40px... 改成 25px */
+    margin-top: 40px;      /* 原本是 60px... 改成 40px */
+    
+    text-align: center;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+    /* [修改 2] 縮小圖示與版權文字的距離 */
+    margin-bottom: 15px;   /* 原本是 25px */
+}
+
+/* --- 統一的圖示樣式 --- */
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.footer-item:hover {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.footer-icon {
+    width: 38px;  /* [修改 3] 圖示稍微改小一點點，更精緻 */
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 6px; 
+    
+    /* 統一預設背景：半透明白色 */
+    background: rgba(255, 255, 255, 0.1); 
+    transition: background 0.3s ease;
+}
+
+.footer-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor; /* 統一使用線條顏色 */
+}
+
+.footer-text {
+    font-size: 0.8rem; /* 字體稍微縮小 */
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   [品牌顏色特效] 滑鼠移過去才變色 (統一邏輯)
+   ========================================= */
+
+/* Email (藍灰) */
+.footer-item:hover .email-icon { background: #475569; }
+
+/* CakeResume (綠色) */
+.footer-item:hover .cake-icon { background: #38b2ac; }
+
+/* LinkedIn (藍色) */
+.footer-item:hover .linkedin-icon { background: #0077b5; }
+
+/* 104 人力銀行 (橘色) - 現在跟其他人一樣，移過去才變橘色 */
+.footer-item:hover .job-icon { background: #ed8936; }
+
+
+/* 版權宣告 */
+.copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    
+    /* [修改 4] 縮小這裡的距離 */
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    
+    display: inline-block;
+    
+}
+
+/* 手機版微調 */
+@media screen and (max-width: 600px) {
+    .site-footer { padding: 20px 0 15px; } /* 手機版再更小 */
+    .footer-social-links { gap: 20px; }
+}
+
+/* =========================================
+   [優化版] 競賽經驗樣式 (相簿網格風格)
+   ========================================= */
+
+.comp-card {
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* 標題區塊 */
+.comp-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.comp-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* 名次標籤 (銀色) */
+.rank-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+}
+.rank-badge.gold { background: #f1c40f; }   /* 第一名金色 */
+.rank-badge.silver { background: #95a5a6; } /* 第二名銀色 */
+.rank-badge.bronze { background: #cd7f32; } /* 第三名銅色 */
+.rank-badge.other { background: #1f4e79; }  /* 其他獎項藍色 */
+
+
+/* 說明文字 */
+.comp-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* [關鍵] 圖片網格系統 */
+.comp-gallery-grid {
+    display: grid;
+    /* 電腦版：自動分成 3 欄 (每張圖大小一樣) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; /* 圖片之間的間距 */
+    margin-bottom: 25px;
+}
+
+.comp-gallery-grid img {
+    width: 100%;
+    height: 180px;      /* 固定高度，讓版面超整齊 */
+    object-fit: cover;  /* 讓圖片填滿框框，不會變形 */
+    border-radius: 6px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* 滑鼠移過去圖片浮起 */
+.comp-gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* 按鈕區塊 */
+.action-area {
+    display: flex;
+    
+    /* [修改] 原本是 flex-end (靠右)，改成 flex-start (靠左) */
+    justify-content: flex-start; 
+    
+    /* [新增] 增加一點上方距離，不要貼著照片太近 */
+    margin-top: 20px; 
+}
+
+.comp-file-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    color: #1f4e79;
+    padding: 10px 20px;
+    border-radius: 30px; /* 圓角按鈕 */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.comp-file-btn:hover {
+    background-color: #1f4e79;
+    color: #fff;
+    border-color: #1f4e79;
+}
+
+.comp-file-btn .file-icon {
+    margin-right: 8px;
+}
+
+/* 手機版響應式調整 */
+@media screen and (max-width: 600px) {
+    .comp-gallery-grid {
+        /* 手機版改成 2 欄，比較看得清楚 */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+    .comp-gallery-grid img {
+        height: 140px; /* 手機上圖片高度縮小一點 */
+    }
+    .comp-header {
+        flex-direction: column; /* 標題太長時自動換行 */
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* =========================================
+   [修正] 單張照片專用樣式
+   ========================================= */
+
+/* 當網格被標記為 single-img 時 */
+.comp-gallery-grid.single-img {
+    display: block; /* 取消網格，改為一般區塊 */
+}
+
+.comp-gallery-grid.single-img img {
+    /* 設定最大寬度為 50%~60%，避免太巨大嚇人，也不會太小 */
+    width: 60%; 
+    height: auto;        /* 高度自動，保持原本比例 */
+    max-height: 450px;   /* 限制最大高度，避免直式照片佔太多版面 */
+    object-fit: contain; /* 完整顯示圖片內容 */
+    
+    /* 讓圖片靠左對齊 (若想置中可改 margin: 0 auto) */
+    margin-right: auto;  
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 手機版：讓單張照片變寬一點，比較好看 */
+@media screen and (max-width: 600px) {
+    .comp-gallery-grid.single-img img {
+        width: 100%; /* 手機上佔滿寬度 */
+        max-height: 300px;
+    }
+}
