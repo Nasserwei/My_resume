@@ -353,6 +353,26 @@ p {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+.experience-block .exp-list {
+    margin: 4px 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+.experience-block .exp-list li {
+    position: relative;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    padding-left: 18px;
+}
+.experience-block .exp-list li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.6em;
+    line-height: 1.9;
+    color: var(--primary-color, #666);
+}
 
 /* =========================================
    [修改] 專案作品排版 (上文下圖 + 網格圖片)
@@ -428,6 +448,10 @@ p {
     border-left: 3px solid #ddd;
     padding-left: 10px;
     margin-top: 10px;
+}
+.note::before {
+    content: "▸ ";
+    font-style: normal;
 }
 
 /* 競賽獎牌 */
