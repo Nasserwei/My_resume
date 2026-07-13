@@ -895,10 +895,19 @@ p {
 
 /* 說明文字 */
 .comp-desc {
+    position: relative;
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
     margin-bottom: 25px;
+    padding-left: 18px;
+}
+.comp-desc::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
 }
 
 /* [關鍵] 圖片網格系統 */
